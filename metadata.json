@@ -1,0 +1,6 @@
+{
+  "name": "The Student Digital Hub",
+  "description": "A premier digital publication and SEO case study helping college students master digital skills, productivity, career prep, and modern technology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
