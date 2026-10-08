@@ -37,6 +37,8 @@ export interface Article {
   seoTitle: string;
   metaDescription: string;
   primaryKeyword: string;
+  secondaryKeyword1: string;
+  secondaryKeyword2: string;
   secondaryKeywords: string[];
   category: CategoryType;
   publishedDate: string;

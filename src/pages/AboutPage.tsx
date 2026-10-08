@@ -129,17 +129,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenSeoInspe
 
         </div>
 
-        <div className="pt-2 flex items-center justify-between border-t border-stone-100">
+        <div className="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-stone-100">
           <span className="text-xs text-stone-500">
-            Want to examine on-page metrics live?
+            Want to examine on-page metrics and the faculty matrix?
           </span>
-          <button
-            onClick={onOpenSeoInspector}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-amber-950 bg-amber-100 hover:bg-amber-200 rounded transition-colors cursor-pointer"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-amber-800" />
-            <span>Launch Live SEO Inspector</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => onNavigate('/seo-checklist')}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-200 hover:bg-stone-300 rounded transition-colors cursor-pointer"
+            >
+              <span>View Faculty SEO Checklist</span>
+            </button>
+            <button
+              onClick={onOpenSeoInspector}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-amber-950 bg-amber-100 hover:bg-amber-200 rounded transition-colors cursor-pointer"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-amber-800" />
+              <span>Launch Live SEO Inspector</span>
+            </button>
+          </div>
         </div>
       </section>
 

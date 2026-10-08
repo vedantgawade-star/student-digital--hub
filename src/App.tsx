@@ -8,6 +8,7 @@ import { ArticleDetailPage } from './pages/ArticleDetailPage.tsx';
 import { AboutPage } from './pages/AboutPage.tsx';
 import { ContactPage } from './pages/ContactPage.tsx';
 import { SitemapPage } from './pages/SitemapPage.tsx';
+import { SeoChecklistPage } from './pages/SeoChecklistPage.tsx';
 import { ARTICLES } from './data/articles.ts';
 import { updatePageSeo, generateArticleJsonLd } from './utils/seo.ts';
 
@@ -87,6 +88,13 @@ export default function App() {
         canonicalPath: '/sitemap',
         ogType: 'website'
       });
+    } else if (currentPath.startsWith('/seo-checklist')) {
+      updatePageSeo({
+        title: 'Faculty SEO Checklist & On-Page Audit Matrix | The Student Digital Hub',
+        description: 'Comprehensive evaluation matrix and verification table of all on-page SEO elements for Fundamentals of SEO college course assessment.',
+        canonicalPath: '/seo-checklist',
+        ogType: 'website'
+      });
     } else {
       // Home page
       updatePageSeo({
@@ -152,6 +160,15 @@ export default function App() {
       return (
         <SitemapPage
           onNavigate={navigateTo}
+        />
+      );
+    }
+
+    if (currentPath.startsWith('/seo-checklist')) {
+      return (
+        <SeoChecklistPage
+          onNavigate={navigateTo}
+          onOpenSeoInspector={handleOpenSeoInspector}
         />
       );
     }

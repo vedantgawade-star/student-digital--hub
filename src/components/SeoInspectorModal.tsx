@@ -229,10 +229,10 @@ export const SeoInspectorModal: React.FC<SeoInspectorModalProps> = ({
                   <p className="text-stone-700 text-xs sm:text-sm leading-relaxed">{audit.metaDescription}</p>
                 </div>
 
-                {/* Canonical & Slug */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Canonical & Slug & Keywords */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="p-3 bg-stone-50 border border-stone-200 rounded-lg">
-                    <span className="text-[11px] uppercase tracking-wider text-stone-500 block mb-1">
+                    <span className="text-[11px] uppercase tracking-wider text-amber-800 block mb-1 font-semibold">
                       Primary Target Keyword
                     </span>
                     <p className="text-xs font-semibold text-stone-900 font-mono">
@@ -241,9 +241,20 @@ export const SeoInspectorModal: React.FC<SeoInspectorModalProps> = ({
                   </div>
                   <div className="p-3 bg-stone-50 border border-stone-200 rounded-lg">
                     <span className="text-[11px] uppercase tracking-wider text-stone-500 block mb-1">
+                      Secondary Keywords (1 & 2)
+                    </span>
+                    <p className="text-xs text-stone-700 font-mono">
+                      1. "{currentArticle.secondaryKeyword1}"
+                    </p>
+                    <p className="text-xs text-stone-700 font-mono mt-0.5">
+                      2. "{currentArticle.secondaryKeyword2}"
+                    </p>
+                  </div>
+                  <div className="p-3 bg-stone-50 border border-stone-200 rounded-lg">
+                    <span className="text-[11px] uppercase tracking-wider text-stone-500 block mb-1">
                       Canonical Link Tag
                     </span>
-                    <p className="text-xs text-stone-600 font-mono truncate">
+                    <p className="text-xs text-stone-600 font-mono truncate" title={audit.canonicalUrl}>
                       {audit.canonicalUrl}
                     </p>
                   </div>

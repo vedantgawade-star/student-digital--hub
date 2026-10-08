@@ -107,8 +107,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenSeoInspector }
               </li>
               <li>
                 <button
+                  onClick={() => { onNavigate('/seo-checklist'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  className="text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1 font-medium"
+                >
+                  <FileText className="w-3 h-3" />
+                  <span>Faculty SEO Checklist (/seo-checklist)</span>
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => { onNavigate('/sitemap'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1"
+                  className="text-stone-300 hover:text-white transition-colors flex items-center gap-1"
                 >
                   <FileText className="w-3 h-3" />
                   <span>HTML & XML Sitemaps</span>

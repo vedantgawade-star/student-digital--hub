@@ -306,14 +306,14 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({
                     >
                       <div>
                         <span className="text-xs font-semibold text-stone-900 group-hover:text-amber-800 transition-colors block">
-                          → {targetArt ? targetArt.title : link.anchorText}
+                          → <span className="underline decoration-amber-600/40 underline-offset-2">{link.anchorText}</span>
                         </span>
-                        <p className="text-xs text-stone-500 mt-0.5">
+                        <p className="text-xs text-stone-500 mt-1">
                           {link.context}
                         </p>
                       </div>
                       <span className="text-xs text-amber-800 font-medium inline-flex items-center gap-1 shrink-0 self-start sm:self-auto">
-                        <span>Read guide</span>
+                        <span>Explore guide</span>
                         <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </span>
                     </div>

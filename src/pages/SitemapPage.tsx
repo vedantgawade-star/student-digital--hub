@@ -83,6 +83,7 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({ onNavigate }) => {
           {[
             { title: 'Home Page', path: '/', desc: 'Lead editorial showcase, top disciplines, and featured guides.' },
             { title: 'All Articles & Search Archive', path: '/blog', desc: 'Complete searchable catalog of all 10 long-form student articles.' },
+            { title: 'Faculty SEO Checklist', path: '/seo-checklist', desc: 'Detailed on-page SEO assessment matrix for faculty grading.' },
             { title: 'About & Academic Rubric', path: '/about', desc: 'Course syllabus alignment, SEO methodology, and author credentials.' },
             { title: 'Contact Desk & Inquiries', path: '/contact', desc: 'Editorial inquiries, collaboration proposals, and student FAQs.' },
           ].map((page) => (

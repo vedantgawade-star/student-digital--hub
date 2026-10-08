@@ -13,7 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate, onOpenS
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'All Articles', path: '/blog' },
-    { label: 'Categories', path: '/categories' },
+    { label: 'SEO Checklist', path: '/seo-checklist' },
     { label: 'About Project', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ];

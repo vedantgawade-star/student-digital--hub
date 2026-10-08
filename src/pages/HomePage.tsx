@@ -103,7 +103,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSeoInspect
                 </p>
               </div>
               <div className="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400 group-hover:text-stone-700">
-                <span>Explore articles</span>
+                <span>Explore {cat.name}</span>
                 <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
               </div>
             </button>
@@ -162,18 +162,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSeoInspect
               </div>
             </div>
 
-            <div className="pt-4 flex items-center gap-3">
+            <div className="pt-4 flex flex-wrap items-center gap-3">
+              <button
+                onClick={() => onNavigate('/seo-checklist')}
+                className="px-4 py-2 text-xs font-semibold text-stone-950 bg-amber-400 hover:bg-amber-300 rounded transition-colors cursor-pointer"
+              >
+                View Faculty SEO Checklist
+              </button>
               <button
                 onClick={onOpenSeoInspector}
-                className="px-4 py-2 text-xs font-medium text-stone-950 bg-amber-400 hover:bg-amber-300 rounded transition-colors cursor-pointer"
+                className="px-4 py-2 text-xs font-medium text-white border border-stone-700 hover:bg-stone-800 rounded transition-colors cursor-pointer"
               >
                 Inspect Live SEO Data
               </button>
               <button
                 onClick={() => onNavigate('/about')}
-                className="px-4 py-2 text-xs font-medium text-white border border-stone-700 hover:bg-stone-800 rounded transition-colors cursor-pointer"
+                className="px-4 py-2 text-xs font-medium text-stone-300 hover:text-white transition-colors cursor-pointer"
               >
-                Read Project Syllabus & Goals
+                Project Syllabus & Goals
               </button>
             </div>
           </div>

@@ -81,9 +81,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, onNavigate, f
                 href={`/article/${article.slug}`}
                 onClick={handleClick}
                 className="inline-flex items-center gap-1 text-xs font-semibold text-stone-900 hover:text-amber-700 transition-colors"
-                aria-label={`Read full article: ${article.title}`}
+                aria-label={`Read complete guide: ${article.title}`}
               >
-                <span>Read Article</span>
+                <span>Read {article.category} Guide</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -147,8 +147,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, onNavigate, f
             href={`/article/${article.slug}`}
             onClick={handleClick}
             className="inline-flex items-center gap-1 font-semibold text-stone-900 group-hover:text-amber-700 transition-colors"
+            aria-label={`Read guide: ${article.title}`}
           >
-            <span>Read</span>
+            <span>Read {article.category} Guide</span>
             <ArrowUpRight className="w-3 h-3" />
           </a>
         </div>
