@@ -13,7 +13,7 @@ export function updatePageSeo(params: {
   document.title = title;
 
   // 2. Base domain
-  const baseUrl = 'https://thestudentdigitalhub.vercel.app';
+  const baseUrl = 'https://student-digital-hub.vercel.app';
   const fullCanonicalUrl = canonicalPath.startsWith('http') 
     ? canonicalPath 
     : `${baseUrl}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
@@ -63,7 +63,7 @@ function updateMetaTag(attrName: 'name' | 'property', attrValue: string, content
   el.setAttribute('content', content);
 }
 
-export function generateArticleJsonLd(article: Article, originUrl: string = 'https://thestudentdigitalhub.vercel.app') {
+export function generateArticleJsonLd(article: Article, originUrl: string = 'https://student-digital-hub.vercel.app') {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -146,7 +146,7 @@ export function auditArticleSeo(article: Article): SeoAuditReport {
     keywordCount,
     keywordDensity: `${density}%`,
     wordCount: article.wordCount,
-    canonicalUrl: `https://thestudentdigitalhub.vercel.app/article/${article.slug}`,
+    canonicalUrl: `https://student-digital-hub.vercel.app/article/${article.slug}`,
     headingsCount: {
       h1: 1, // The article title is the semantic H1
       h2: h2Count,

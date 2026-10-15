@@ -318,7 +318,7 @@ export const SeoInspectorModal: React.FC<SeoInspectorModalProps> = ({
                   </div>
                   <div>
                     <span className="text-stone-900 font-medium block leading-none">The Student Digital Hub</span>
-                    <span className="text-stone-500 text-[11px]">https://thestudentdigitalhub.vercel.app › article › {currentArticle.slug}</span>
+                    <span className="text-stone-500 text-[11px]">https://student-digital-hub.vercel.app › article › {currentArticle.slug}</span>
                   </div>
                 </div>
 
@@ -351,7 +351,7 @@ export const SeoInspectorModal: React.FC<SeoInspectorModalProps> = ({
                   />
                   <div className="p-4 bg-stone-50">
                     <span className="text-[11px] uppercase tracking-wider text-stone-400 block mb-1">
-                      thestudentdigitalhub.vercel.app
+                      student-digital-hub.vercel.app
                     </span>
                     <h5 className="font-semibold text-stone-900 text-sm leading-tight mb-1">
                       {currentArticle.seoTitle}
@@ -420,7 +420,7 @@ export const SeoInspectorModal: React.FC<SeoInspectorModalProps> = ({
 {`User-agent: *
 Allow: /
 
-Sitemap: https://thestudentdigitalhub.vercel.app/sitemap.xml`}
+Sitemap: https://student-digital-hub.vercel.app/sitemap.xml`}
                   </pre>
                 </div>
 
